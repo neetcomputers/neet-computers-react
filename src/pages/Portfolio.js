@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 // Lazy image component with reserved space
-function LazyImage({ src, alt, priority = false, aspectRatio = 'auto' }) {
+function LazyImage({ src, alt, priority = false, aspectRatio = 'auto', fixedSize = null }) {
   const [isVisible, setIsVisible] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [imgSrc, setImgSrc] = useState(null);
@@ -58,8 +58,9 @@ function LazyImage({ src, alt, priority = false, aspectRatio = 'auto' }) {
 
   const containerStyle = {
     position: 'relative',
-    width: '100%',
-    ...(aspectRatio !== 'auto' && {
+    width: fixedSize ? `${fixedSize}px` : '100%',
+    height: fixedSize ? `${fixedSize}px` : 'auto',
+    ...(aspectRatio !== 'auto' && !fixedSize && {
       paddingBottom: `${getAspectRatio()}%`,
       height: 0
     })
@@ -78,11 +79,11 @@ function LazyImage({ src, alt, priority = false, aspectRatio = 'auto' }) {
   };
 
   const imageStyle = {
-    position: aspectRatio !== 'auto' ? 'absolute' : 'relative',
+    position: 'absolute',
     top: 0,
     left: 0,
     width: '100%',
-    height: aspectRatio !== 'auto' ? '100%' : 'auto',
+    height: '100%',
     objectFit: 'cover',
     opacity: isLoaded ? 1 : 0,
     transition: 'opacity 0.3s ease'
@@ -121,7 +122,8 @@ export default function Portfolio() {
                 src={process.env.PUBLIC_URL + "/images/ui-icons/mod.webp"} 
                 alt="Desktop PC Modifications" 
                 priority={true}
-                aspectRatio="16/9"
+                aspectRatio="1/1"
+                fixedSize={200}
               />
             </Link>
             <Link to="/wraps" className="catcard">
@@ -130,7 +132,8 @@ export default function Portfolio() {
                 src={process.env.PUBLIC_URL + "/images/ui-icons/wrap.webp"} 
                 alt="Custom Vinyl Wraps" 
                 priority={true}
-                aspectRatio="16/9"
+                aspectRatio="1/1"
+                fixedSize={200}
               />
             </Link>
             <Link to="/workstations" className="catcard">
@@ -139,7 +142,8 @@ export default function Portfolio() {
                 src={process.env.PUBLIC_URL + "/images/ui-icons/workstation.webp"} 
                 alt="Workstation Computers" 
                 priority={true}
-                aspectRatio="16/9"
+                aspectRatio="1/1"
+                fixedSize={200}
               />
             </Link>
             <Link to="/servers" className="catcard">
@@ -148,7 +152,8 @@ export default function Portfolio() {
                 src={process.env.PUBLIC_URL + "/images/ui-icons/server.webp"} 
                 alt="Server" 
                 priority={true}
-                aspectRatio="16/9"
+                aspectRatio="1/1"
+                fixedSize={200}
               />
             </Link>
           </div>
