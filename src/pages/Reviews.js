@@ -3,9 +3,22 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 // Lazy widget component with reserved space
+function ensureElfsightScript() {
+  if (
+    document.querySelector(
+      'script[src="https://static.elfsight.com/platform/platform.js"]'
+    )
+  ) {
+    return;
+  }
+  const s = document.createElement('script');
+  s.src = 'https://static.elfsight.com/platform/platform.js';
+  s.defer = true;
+  document.body.appendChild(s);
+}
+
 function LazyReviewWidget({ appId, widgetType }) {
   const [isVisible, setIsVisible] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
   const widgetRef = useRef(null);
 
   // Reserve space based on widget type (mobile vs desktop dimensions)
@@ -20,12 +33,16 @@ function LazyReviewWidget({ appId, widgetType }) {
     return '350px'; // default
   };
 
-  // Intersection Observer to detect when widget approaches viewport
+  // Intersection Observer to detect when widget approaches viewport.
+  // When it fires, mount the Elfsight div AND make sure the platform
+  // script is on its way: the page level loader only injects it when a
+  // widget div already exists, which is never true for a lazy widget.
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && !isVisible) {
+          if (entry.isIntersecting) {
+            ensureElfsightScript();
             setIsVisible(true);
           }
         });
@@ -41,24 +58,20 @@ function LazyReviewWidget({ appId, widgetType }) {
     }
 
     return () => {
-      if (widgetRef.current) {
-        observer.unobserve(widgetRef.current);
-      }
+      observer.disconnect();
     };
-  }, [isVisible]);
+  }, []);
 
   return (
-    <div 
+    <div
       ref={widgetRef}
       className="lazy-widget-container"
       style={{
         position: 'relative',
         minHeight: getReservedHeight(),
-        background: isVisible ? 'transparent' : '#f5f5f5',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center',
-        overflow: 'hidden'
+        justifyContent: 'center'
       }}
     >
       {!isVisible && (
@@ -69,47 +82,16 @@ function LazyReviewWidget({ appId, widgetType }) {
           Loading reviews...
         </div>
       )}
-      {isVisible && !isLoaded && (
-        <div className="widget-loading" style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          background: '#f5f5f5'
-        }}>
-          <div className="loading-spinner" style={{
-            width: '40px',
-            height: '40px',
-            border: '4px solid #f3f3f3',
-            borderTop: '4px solid #3498db',
-            borderRadius: '50%',
-            animation: 'spin 1s linear infinite'
-          }} />
-        </div>
-      )}
       {isVisible && (
-        <div 
+        <div
           className={`elfsight-app-${appId}`}
           data-elfsight-app-lazy
           style={{
             width: '100%',
-            minHeight: getReservedHeight(),
-            opacity: isLoaded ? 1 : 0,
-            transition: 'opacity 0.3s ease'
+            minHeight: getReservedHeight()
           }}
-          onLoad={() => setIsLoaded(true)}
         />
       )}
-      <style>{`
-        @keyframes spin {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-        }
-      `}</style>
     </div>
   );
 }
