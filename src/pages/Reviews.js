@@ -18,15 +18,15 @@ function ensureElfsightScript() {
   }
   const s = document.createElement('script');
   s.src = 'https://static.elfsight.com/platform/platform.js';
-  s.defer = true;
+  s.async = true;
   document.body.appendChild(s);
 }
 
-function LazyReviewWidget({ appId, widgetType }) {
-  // Reserve space based on widget type (mobile vs desktop dimensions)
-  const getReservedHeight = () => {
-    // Facebook reviews widget: ~400px desktop, ~500px mobile
-    // Google reviews widget: ~350px desktop, ~450px mobile
+function LazyReviewWidget({ appId, widgetType, isFirst = false }) {
+  // Reserve minimum space based on widget type (responsive, allows growth)
+  const getMinHeight = () => {
+    // Facebook reviews widget: min 400px desktop, allows expansion
+    // Google reviews widget: min 350px desktop, allows expansion
     if (widgetType === 'facebook') {
       return '400px';
     } else if (widgetType === 'google') {
@@ -44,15 +44,15 @@ function LazyReviewWidget({ appId, widgetType }) {
       className="lazy-widget-container"
       style={{
         position: 'relative',
-        minHeight: getReservedHeight()
+        minHeight: getMinHeight()
       }}
     >
       <div
         className={`elfsight-app-${appId}`}
-        data-elfsight-app-lazy
+        {...(!isFirst && { 'data-elfsight-app-lazy': true })}
         style={{
           width: '100%',
-          minHeight: getReservedHeight()
+          minHeight: '100%'
         }}
       />
     </div>
@@ -65,7 +65,7 @@ export default function Reviews() {
       <article>
         <h2>Facebook Reviews</h2>
         <div className="card-container">
-          <LazyReviewWidget appId="efd88dc5-2313-4ed6-9a25-398a440a5b38" widgetType="facebook" />
+          <LazyReviewWidget appId="efd88dc5-2313-4ed6-9a25-398a440a5b38" widgetType="facebook" isFirst={true} />
         </div>
         <br />
         <h2>Google Reviews</h2>
@@ -78,38 +78,50 @@ export default function Reviews() {
         <div className="contact-methods">
           <div>
             <a href="https://nextdoor.com/pages/neet-computers-boulder-co/">
-              <img src={process.env.PUBLIC_URL + "/images/ui-icons/Nextdoor-Logo.webp"} alt="Nextdoor Logo" />
+              <div className="logo-placeholder" style={{ minHeight: '60px', marginBottom: '8px' }}>
+                <img src={process.env.PUBLIC_URL + "/images/ui-icons/Nextdoor-Logo.webp"} alt="Nextdoor Logo" style={{ maxWidth: '100%', height: 'auto' }} />
+              </div>
               <h3>Nextdoor</h3>
             </a>
           </div>
           <div>
             <a href="https://offerup.com/p/487680284">
-              <img src={process.env.PUBLIC_URL + "/images/ui-icons/offeruplogo.webp"} alt="Offerup Logo" />
+              <div className="logo-placeholder" style={{ minHeight: '60px', marginBottom: '8px' }}>
+                <img src={process.env.PUBLIC_URL + "/images/ui-icons/offeruplogo.webp"} alt="Offerup Logo" style={{ maxWidth: '100%', height: 'auto' }} />
+              </div>
               <h3>Offerup</h3>
             </a>
           </div>
           <div>
             <a href="https://www.yelp.com/biz/neet-computers-boulder">
-              <img src={process.env.PUBLIC_URL + "/images/ui-icons/Yelp_Logo.webp"} alt="Yelp Logo" />
+              <div className="logo-placeholder" style={{ minHeight: '60px', marginBottom: '8px' }}>
+                <img src={process.env.PUBLIC_URL + "/images/ui-icons/Yelp_Logo.webp"} alt="Yelp Logo" style={{ maxWidth: '100%', height: 'auto' }} />
+              </div>
               <h3>Yelp</h3>
             </a>
           </div>
           <div>
             <a href="https://www.facebook.com/marketplace/profile/100024614416481/">
-              <img src={process.env.PUBLIC_URL + "/images/ui-icons/fbmarketplace.webp"} alt="Facebook Marketplace Logo" />
+              <div className="logo-placeholder" style={{ minHeight: '60px', marginBottom: '8px' }}>
+                <img src={process.env.PUBLIC_URL + "/images/ui-icons/fbmarketplace.webp"} alt="Facebook Marketplace Logo" style={{ maxWidth: '100%', height: 'auto' }} />
+              </div>
               <h3>Marketplace</h3>
             </a>
           </div>
           <div>
             <a href="https://business.colgbtqcc.org/list/member/neet-computers-llc-2386">
-              <img src={process.env.PUBLIC_URL + "/images/ui-icons/CLBGTQCOC.webp"} alt="Colorado LGBTQ Chamber of Commerce" />
+              <div className="logo-placeholder" style={{ minHeight: '60px', marginBottom: '8px' }}>
+                <img src={process.env.PUBLIC_URL + "/images/ui-icons/CLBGTQCOC.webp"} alt="Colorado LGBTQ Chamber of Commerce" style={{ maxWidth: '100%', height: 'auto' }} />
+              </div>
               <h3>LGBTQ CoC</h3>
             </a>
           </div>
         </div>
       </div>
       <div className="reviews">
-        <img src={process.env.PUBLIC_URL + "/images/ui-icons/nextdoor.webp"} alt="Nextdoor Neighborhood Fave" />
+        <div className="logo-placeholder" style={{ minHeight: '60px', marginBottom: '8px' }}>
+          <img src={process.env.PUBLIC_URL + "/images/ui-icons/nextdoor.webp"} alt="Nextdoor Neighborhood Fave" style={{ maxWidth: '100%', height: 'auto' }} />
+        </div>
       </div>
       <br />
     </main>
