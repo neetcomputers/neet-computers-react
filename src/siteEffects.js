@@ -61,7 +61,7 @@ const originalParents = new Map();
 export function toggleExpand(sectionId, button) {
   const content = document.getElementById(sectionId + '-content');
   const section = document.getElementById(sectionId);
-  if (!content || !section || !button) return;
+  if (!content || !button) return;
 
   let buttonId = button.getAttribute('id') || button.dataset.originalId;
   if (!buttonId) {

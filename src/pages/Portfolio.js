@@ -48,7 +48,7 @@ export default function Portfolio() {
                         <img src={process.env.PUBLIC_URL + "/images/partners/Echo-thorns.webp"} alt="EchoThorns" className="businesscard-image" />
                         <div className="businesscard-content">
                           <div className="businesscard-title">EchoThorns</div>
-                          <p className="businesscard-description">Arist, vTuber, and Twitch streamer. She's the talented creator of our <a href="https://www.instagram.com/p/CvJPW3FsEuK/">mascot</a>, <a href="https://www.instagram.com/p/CS2pAsEFlZa/?img_index=3">Violet</a>. <br /> <br /> She's also our first sponsorship, receiving a refurbished, upgraded, and tuned <a href="https://www.instagram.com/p/DIsfHbJM9r1/?img_index=1">mobile workstation</a> to further her creative efforts!</p>
+                          <p className="businesscard-description">Artist, vTuber, and Twitch streamer. She's the talented creator of our <a href="https://www.instagram.com/p/CvJPW3FsEuK/">mascot</a>, <a href="https://www.instagram.com/p/CS2pAsEFlZa/?img_index=3">Violet</a>. <br /> <br /> She's also our first sponsorship, receiving a refurbished, upgraded, and tuned <a href="https://www.instagram.com/p/DIsfHbJM9r1/?img_index=1">mobile workstation</a> to further her creative efforts!</p>
                           </div>
                         <a href="https://echothorns.carrd.co/" className="businesscard-arrow">Echo's Card ➔</a>
                       </div>

@@ -63,7 +63,7 @@ export default function Contact() {
                     <fieldset>
                         <label htmlFor="contact-reason"><select id="contact-reason" name="contact-reason">
                                 <option value="">Reason for Contact</option>
-                                <option value="Commission Request">Comission Request</option>
+                                <option value="Commission Request">Commission Request</option>
                                 <option value="Service Request">Service Request</option>
                                 <option value="B2B">Business-to-Business Inquiry</option>
                                 <option value="Problem with Purchase">Problems with a Purchase</option>
