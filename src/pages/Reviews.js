@@ -1,5 +1,5 @@
 // Ported from reviews.html (static site source).
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 // Review widget with reserved space. Elfsight's supported integration:
@@ -23,17 +23,43 @@ function ensureElfsightScript() {
 }
 
 function LazyReviewWidget({ appId, widgetType, isFirst = false }) {
+  const divRef = useRef(null);
+
   useEffect(() => {
     ensureElfsightScript();
-  }, []);
+
+    if (isFirst) {
+      // First visible widget - initialize immediately, no lazy attribute
+      return;
+    }
+
+    // Lazy widget - use IntersectionObserver to defer initialization until viewport
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Trigger Elfsight lazy loading when widget approaches viewport
+          if (divRef.current) {
+            divRef.current.setAttribute('data-elfsight-app-lazy', 'true');
+          }
+          observer.disconnect();
+        }
+      });
+    }, { threshold: 0.1 });
+
+    if (divRef.current) {
+      observer.observe(divRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [isFirst]);
 
   return (
     <div
       className={`lazy-widget-container ${widgetType === 'facebook' ? 'facebook-widget' : 'google-widget'}`}
     >
       <div
+        ref={divRef}
         className={`elfsight-app-${appId}`}
-        {...(isFirst ? {} : { 'data-elfsight-app-lazy': true })}
         style={{
           width: '100%'
         }}
@@ -69,13 +95,11 @@ export default function Reviews() {
       <article>
         <h2>Facebook Reviews</h2>
         <div className="card-container">
-          {/* First visible widget - initializes immediately without lazy */}
           <LazyReviewWidget appId="efd88dc5-2313-4ed6-9a25-398a440a5b38" widgetType="facebook" isFirst={true} />
         </div>
         <br />
         <h2>Google Reviews</h2>
         <div className="card-container">
-          {/* Lazy widget - bundle deferred until viewport */}
           <LazyReviewWidget appId="f2d7397a-fb66-488b-8f36-29437ad034be" widgetType="google" />
         </div>
       </article>
