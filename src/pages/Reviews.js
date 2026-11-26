@@ -23,36 +23,19 @@ function ensureElfsightScript() {
 }
 
 function LazyReviewWidget({ appId, widgetType, isFirst = false }) {
-  // Reserve minimum space based on widget type (responsive, allows growth)
-  const getMinHeight = () => {
-    // Facebook reviews widget: min 400px desktop, allows expansion
-    // Google reviews widget: min 350px desktop, allows expansion
-    if (widgetType === 'facebook') {
-      return '400px';
-    } else if (widgetType === 'google') {
-      return '350px';
-    }
-    return '350px'; // default
-  };
-
   useEffect(() => {
     ensureElfsightScript();
   }, []);
 
   return (
     <div
-      className="lazy-widget-container"
-      style={{
-        position: 'relative',
-        minHeight: getMinHeight()
-      }}
+      className={`lazy-widget-container ${widgetType === 'facebook' ? 'facebook-widget' : 'google-widget'}`}
     >
       <div
         className={`elfsight-app-${appId}`}
         {...(!isFirst && { 'data-elfsight-app-lazy': true })}
         style={{
-          width: '100%',
-          minHeight: '100%'
+          width: '100%'
         }}
       />
     </div>
@@ -61,7 +44,28 @@ function LazyReviewWidget({ appId, widgetType, isFirst = false }) {
 
 export default function Reviews() {
   return (
-    <main>
+    <>
+      <style>{`
+        .lazy-widget-container {
+          position: relative;
+          width: 100%;
+        }
+        .facebook-widget {
+          min-height: 400px;
+        }
+        .google-widget {
+          min-height: 350px;
+        }
+        @media (max-width: 768px) {
+          .facebook-widget {
+            min-height: 500px;
+          }
+          .google-widget {
+            min-height: 450px;
+          }
+        }
+      `}</style>
+      <main>
       <article>
         <h2>Facebook Reviews</h2>
         <div className="card-container">
@@ -125,5 +129,6 @@ export default function Reviews() {
       </div>
       <br />
     </main>
+    </>
   );
 }
