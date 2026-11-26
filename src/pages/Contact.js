@@ -10,13 +10,13 @@ export default function Contact() {
             <div className="social-icons">
                 <a href="https://www.facebook.com/neetcomputers">
                     <div className="facebook-logo">
-                    <img src="/images/ui-icons/facebook.webp" alt="Facebook" />
+                    <img src={process.env.PUBLIC_URL + "/images/ui-icons/facebook.webp"} alt="Facebook" />
                     </div>
                     <p>facebook.com/neetcomputers</p>
                 </a>
                 <a href="https://www.instagram.com/neet_pcs_/">
                     <div className="instagram-logo">
-                    <img src="/images/ui-icons/instagram.webp" alt="Instagram" />
+                    <img src={process.env.PUBLIC_URL + "/images/ui-icons/instagram.webp"} alt="Instagram" />
                     </div>
                     <p>instagram.com/neet_pcs_</p>
                 </a>
@@ -27,22 +27,22 @@ export default function Contact() {
             <h2>Or contact us here:</h2>
             <div className="contact-methods">
                 <div>
-                    <img src="/images/ui-icons/messenger.webp" alt="Facebook Messenger Logo" />
+                    <img src={process.env.PUBLIC_URL + "/images/ui-icons/messenger.webp"} alt="Facebook Messenger Logo" />
                     <h3>Facebook Messenger</h3>
                     <a href="https://m.me/jade.isler" target="_blank">m.me/jade.isler</a>
                 </div>
                 <div>
-                    <img src="/images/ui-icons/email.webp" alt="Email Logo" />
+                    <img src={process.env.PUBLIC_URL + "/images/ui-icons/email.webp"} alt="Email Logo" />
                     <h3>Email</h3>
                     <a href="mailto:jade@neet.computer">jade@neet.computer</a>
                 </div>
                 <div>
-                    <img src="/images/ui-icons/discord.webp" alt="Discord Logo" />
+                    <img src={process.env.PUBLIC_URL + "/images/ui-icons/discord.webp"} alt="Discord Logo" />
                     <h3>Discord</h3>
                     <a href="https://discordapp.com/users/573627562375512093">@jadepone</a>
                 </div>
                 <div>
-                    <img src="/images/ui-icons/text.webp" alt="Text Logo" />
+                    <img src={process.env.PUBLIC_URL + "/images/ui-icons/text.webp"} alt="Text Logo" />
                     <h3>Text / Phone</h3>
                     <span>720-432-4280</span>
                 </div>

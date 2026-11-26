@@ -30,8 +30,8 @@ export default function Wraps() {
                         </div>
                             <div className="col-4">
                                 <div className="carousel showcase-carousel" id="carousel-webserver">
-                                    <img src="/images/wraps/violetfront.webp" className="carousel-image" alt="Violet Evergarden custom vinyl wrap" />
-                                    <img src="/images/wraps/violetback.webp" className="carousel-image" alt="NZXT H500 Custom Vinyl Wrap" />
+                                    <img src={process.env.PUBLIC_URL + "/images/wraps/violetfront.webp"} className="carousel-image" alt="Violet Evergarden custom vinyl wrap" />
+                                    <img src={process.env.PUBLIC_URL + "/images/wraps/violetback.webp"} className="carousel-image" alt="NZXT H500 Custom Vinyl Wrap" />
                                     <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-webserver">&#10094;</button>
                                     <button className="carousel-next" data-fn="nextImage" data-arg="carousel-webserver">&#10095;</button>
                                 </div>                  
@@ -50,11 +50,11 @@ export default function Wraps() {
                             </div>
                                 <div className="col-4">
                                     <div className="carousel showcase-carousel" id="carousel-gasai">
-                                        <img src="/images/wraps/yunofront.webp" className="carousel-image" alt="Mirai Nikki custom vinyl wrap" />
-                                        <img src="/images/wraps/yunoside.webp" className="carousel-image" alt="Future Diary custom vinyl wrap" />
-                                        <img src="/images/wraps/yunotop.webp" className="carousel-image" alt="011 Dynamic XL vinyl wrap" />
-                                        <img src="/images/wraps/yunoback.webp" className="carousel-image" alt="Yuno Gasai translucent tempered glass stickers on 011 Dynamic XL case" />
-                                        <img src="/images/wraps/yunosetup.webp" className="carousel-image" aly="Yuno Gasai custom vinyl wrap" />
+                                        <img src={process.env.PUBLIC_URL + "/images/wraps/yunofront.webp"} className="carousel-image" alt="Mirai Nikki custom vinyl wrap" />
+                                        <img src={process.env.PUBLIC_URL + "/images/wraps/yunoside.webp"} className="carousel-image" alt="Future Diary custom vinyl wrap" />
+                                        <img src={process.env.PUBLIC_URL + "/images/wraps/yunotop.webp"} className="carousel-image" alt="011 Dynamic XL vinyl wrap" />
+                                        <img src={process.env.PUBLIC_URL + "/images/wraps/yunoback.webp"} className="carousel-image" alt="Yuno Gasai translucent tempered glass stickers on 011 Dynamic XL case" />
+                                        <img src={process.env.PUBLIC_URL + "/images/wraps/yunosetup.webp"} className="carousel-image" aly="Yuno Gasai custom vinyl wrap" />
                                         <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-gasai">&#10094;</button>
                                         <button className="carousel-next" data-fn="nextImage" data-arg="carousel-gasai">&#10095;</button>
                                     </div>                  
@@ -86,9 +86,9 @@ export default function Wraps() {
                                 </div>
                                     <div className="col-4">
                                         <div className="carousel showcase-carousel" id="carousel-esdeath">
-                                            <img src="/images/wraps/esdeathfront.webp" className="carousel-image" alt="Esdeath vinyl wrap" />
-                                            <img src="/images/wraps/esdeathside.webp" className="carousel-image" alt="Akame Ga Kill vinyl wrap" />
-                                            <img src="/images/wraps/esdeathtop.webp" className="carousel-image" alt="Esdese vinyl wrap" />
+                                            <img src={process.env.PUBLIC_URL + "/images/wraps/esdeathfront.webp"} className="carousel-image" alt="Esdeath vinyl wrap" />
+                                            <img src={process.env.PUBLIC_URL + "/images/wraps/esdeathside.webp"} className="carousel-image" alt="Akame Ga Kill vinyl wrap" />
+                                            <img src={process.env.PUBLIC_URL + "/images/wraps/esdeathtop.webp"} className="carousel-image" alt="Esdese vinyl wrap" />
                                             <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-esdeath">&#10094;</button>
                                             <button className="carousel-next" data-fn="nextImage" data-arg="carousel-esdeath">&#10095;</button>
                                         </div>                  
@@ -120,9 +120,9 @@ export default function Wraps() {
                                     </div>
                                         <div className="col-4">
                                             <div className="carousel showcase-carousel" id="carousel-shell">
-                                                <img src="/images/wraps/shellfront.webp" className="carousel-image" alt="Abalone shell wrap on NZXT H7 case" />
-                                                <img src="/images/wraps/shellback.webp" className="carousel-image" alt="NZXT H7 vinyl wrap" />
-                                                <img src="/images/wraps/shellside.webp" className="carousel-image" alt="Side view of Abalone shell wrap on NZXT H7 case" />
+                                                <img src={process.env.PUBLIC_URL + "/images/wraps/shellfront.webp"} className="carousel-image" alt="Abalone shell wrap on NZXT H7 case" />
+                                                <img src={process.env.PUBLIC_URL + "/images/wraps/shellback.webp"} className="carousel-image" alt="NZXT H7 vinyl wrap" />
+                                                <img src={process.env.PUBLIC_URL + "/images/wraps/shellside.webp"} className="carousel-image" alt="Side view of Abalone shell wrap on NZXT H7 case" />
                                                 <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-shell">&#10094;</button>
                                                 <button className="carousel-next" data-fn="nextImage" data-arg="carousel-shell">&#10095;</button>
                                             </div>                  
@@ -155,9 +155,9 @@ export default function Wraps() {
                                     </div>
                                         <div className="col-4">
                                             <div className="carousel showcase-carousel" id="carousel-neko">
-                                                <img src="/images/wraps/nekofront.webp" className="carousel-image" alt="Neko-themed wrap on Lian Li Lancool 205M case" />
-                                                <img src="/images/wraps/nekoback.webp" className="carousel-image" alt="Back view of Neko-themed wrap on Lian Li Lancool 205M case" />
-                                                <img src="/images/wraps/nekoside.webp" className="carousel-image" alt="Side view of Neko-themed wrap on Lian Li Lancool 205M case" />
+                                                <img src={process.env.PUBLIC_URL + "/images/wraps/nekofront.webp"} className="carousel-image" alt="Neko-themed wrap on Lian Li Lancool 205M case" />
+                                                <img src={process.env.PUBLIC_URL + "/images/wraps/nekoback.webp"} className="carousel-image" alt="Back view of Neko-themed wrap on Lian Li Lancool 205M case" />
+                                                <img src={process.env.PUBLIC_URL + "/images/wraps/nekoside.webp"} className="carousel-image" alt="Side view of Neko-themed wrap on Lian Li Lancool 205M case" />
                                                 <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-neko">&#10094;</button>
                                                 <button className="carousel-next" data-fn="nextImage" data-arg="carousel-neko">&#10095;</button>
                                             </div>                  
@@ -179,10 +179,10 @@ export default function Wraps() {
                                         </div>
                                             <div className="col-4">
                                                 <div className="carousel showcase-carousel" id="carousel-torrent">
-                                                    <img src="/images/wraps/jadefront.webp" className="carousel-image" alt="Front view of Yuno Gasai-themed wrap on Fractal Torrent case" />
-                                                    <img src="/images/wraps/jadetop.webp" className="carousel-image" alt="Top view of Yuno Gasai-themed wrap on Fractal Torrent case" />
-                                                    <img src="/images/wraps/jadeback.webp" className="carousel-image" alt="Back view of Yuno Gasai-themed wrap on Fractal Torrent case" />
-                                                    <img src="/images/wraps/jadeside.webp" className="carousel-image" alt="Side view of Yuno Gasai-themed wrap on Fractal Torrent case" />
+                                                    <img src={process.env.PUBLIC_URL + "/images/wraps/jadefront.webp"} className="carousel-image" alt="Front view of Yuno Gasai-themed wrap on Fractal Torrent case" />
+                                                    <img src={process.env.PUBLIC_URL + "/images/wraps/jadetop.webp"} className="carousel-image" alt="Top view of Yuno Gasai-themed wrap on Fractal Torrent case" />
+                                                    <img src={process.env.PUBLIC_URL + "/images/wraps/jadeback.webp"} className="carousel-image" alt="Back view of Yuno Gasai-themed wrap on Fractal Torrent case" />
+                                                    <img src={process.env.PUBLIC_URL + "/images/wraps/jadeside.webp"} className="carousel-image" alt="Side view of Yuno Gasai-themed wrap on Fractal Torrent case" />
                                                     <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-torrent">&#10094;</button>
                                                     <button className="carousel-next" data-fn="nextImage" data-arg="carousel-torrent">&#10095;</button>
                                                 </div>                  
@@ -218,8 +218,8 @@ export default function Wraps() {
                                         </div>
                                             <div className="col-4">
                                                 <div className="carousel showcase-carousel" id="carousel-displacer">
-                                                    <img src="/images/wraps/displacerfront.webp" className="carousel-image" alt="Front view of Displacer Beast-themed wrap on NZXT H510i case" />
-                                                    <img src="/images/wraps/displacerback.webp" className="carousel-image" alt="Back view of Displacer Beast-themed wrap on NZXT H510i case" />
+                                                    <img src={process.env.PUBLIC_URL + "/images/wraps/displacerfront.webp"} className="carousel-image" alt="Front view of Displacer Beast-themed wrap on NZXT H510i case" />
+                                                    <img src={process.env.PUBLIC_URL + "/images/wraps/displacerback.webp"} className="carousel-image" alt="Back view of Displacer Beast-themed wrap on NZXT H510i case" />
                                                     <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-displacer">&#10094;</button>
                                                     <button className="carousel-next" data-fn="nextImage" data-arg="carousel-displacer">&#10095;</button>
                                                 </div>                  
@@ -283,9 +283,9 @@ export default function Wraps() {
                         </div>
                             <div className="col-4">
                                 <div className="carousel showcase-carousel" id="carousel-dva">
-                                    <img src="/images/wraps/dvafront.webp" className="carousel-image" alt="Front view of D.VA-themed wrap on DIYPC case" />
-                                    <img src="/images/wraps/dvatop.webp" className="carousel-image" alt="Top view of D.VA-themed wrap on DIYPC case" />
-                                    <img src="/images/wraps/dvasetup.webp" className="carousel-image" alt="Full setup view featuring D.VA-themed wrap on DIYPC case" />
+                                    <img src={process.env.PUBLIC_URL + "/images/wraps/dvafront.webp"} className="carousel-image" alt="Front view of D.VA-themed wrap on DIYPC case" />
+                                    <img src={process.env.PUBLIC_URL + "/images/wraps/dvatop.webp"} className="carousel-image" alt="Top view of D.VA-themed wrap on DIYPC case" />
+                                    <img src={process.env.PUBLIC_URL + "/images/wraps/dvasetup.webp"} className="carousel-image" alt="Full setup view featuring D.VA-themed wrap on DIYPC case" />
                                     <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-dva">&#10094;</button>
                                     <button className="carousel-next" data-fn="nextImage" data-arg="carousel-dva">&#10095;</button>
                                 </div>                  
@@ -322,9 +322,9 @@ export default function Wraps() {
                             </div>
                                 <div className="col-4">
                                     <div className="carousel showcase-carousel" id="carousel-evergarden">
-                                        <img src="/images/wraps/violet205front.webp" className="carousel-image" alt="Front view of Violet Evergarden-themed wrap on Lian Li Lancool 205 case" />
-                                        <img src="/images/wraps/violet205back.webp" className="carousel-image" alt="Back view of Violet Evergarden-themed wrap on Lian Li Lancool 205 case" />
-                                        <img src="/images/wraps/violet205side.webp" className="carousel-image" alt="Side view of Violet Evergarden-themed wrap on Lian Li Lancool 205 case" />
+                                        <img src={process.env.PUBLIC_URL + "/images/wraps/violet205front.webp"} className="carousel-image" alt="Front view of Violet Evergarden-themed wrap on Lian Li Lancool 205 case" />
+                                        <img src={process.env.PUBLIC_URL + "/images/wraps/violet205back.webp"} className="carousel-image" alt="Back view of Violet Evergarden-themed wrap on Lian Li Lancool 205 case" />
+                                        <img src={process.env.PUBLIC_URL + "/images/wraps/violet205side.webp"} className="carousel-image" alt="Side view of Violet Evergarden-themed wrap on Lian Li Lancool 205 case" />
                                         <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-evergarden">&#10094;</button>
                                         <button className="carousel-next" data-fn="nextImage" data-arg="carousel-evergarden">&#10095;</button>
                                     </div>                  
@@ -357,9 +357,9 @@ export default function Wraps() {
                                 </div>
                                     <div className="col-4">
                                         <div className="carousel showcase-carousel" id="carousel-sam">
-                                            <img src="/images/wraps/samfront.webp" className="carousel-image" alt="Front view of Afro Samurai-themed wrap on NZXT H510 case" />
-                                            <img src="/images/wraps/samtop.webp" className="carousel-image" alt="Top view of Afro Samurai-themed wrap on NZXT H510 case" />
-                                            <img src="/images/wraps/samside.webp" className="carousel-image" alt="Side view of Afro Samurai-themed wrap on NZXT H510 case" />
+                                            <img src={process.env.PUBLIC_URL + "/images/wraps/samfront.webp"} className="carousel-image" alt="Front view of Afro Samurai-themed wrap on NZXT H510 case" />
+                                            <img src={process.env.PUBLIC_URL + "/images/wraps/samtop.webp"} className="carousel-image" alt="Top view of Afro Samurai-themed wrap on NZXT H510 case" />
+                                            <img src={process.env.PUBLIC_URL + "/images/wraps/samside.webp"} className="carousel-image" alt="Side view of Afro Samurai-themed wrap on NZXT H510 case" />
                                             <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-sam">&#10094;</button>
                                             <button className="carousel-next" data-fn="nextImage" data-arg="carousel-sam">&#10095;</button>
                                         </div>                  
@@ -391,10 +391,10 @@ export default function Wraps() {
                                     </div>
                                         <div className="col-4">
                                             <div className="carousel showcase-carousel" id="carousel-degod">
-                                                <img src="/images/wraps/degodfront.webp" className="carousel-image" alt="Front view of Naruto Shippuden Itachi and Sasuke-themed wrap on fishtank case" />
-                                                <img src="/images/wraps/degodback.webp" className="carousel-image" alt="Rear view of Naruto Shippuden Itachi and Sasuke-themed wrap on fishtank case" />
-                                                <img src="/images/wraps/degodside.webp" className="carousel-image" alt="Side view of Naruto Shippuden Itachi and Sasuke-themed wrap on fishtank case" />
-                                                <img src="/images/wraps/degodfront2.webp" className="carousel-image" alt="Clear Front view of Naruto Shippuden Itachi and Sasuke-themed wrap on fishtank case" />
+                                                <img src={process.env.PUBLIC_URL + "/images/wraps/degodfront.webp"} className="carousel-image" alt="Front view of Naruto Shippuden Itachi and Sasuke-themed wrap on fishtank case" />
+                                                <img src={process.env.PUBLIC_URL + "/images/wraps/degodback.webp"} className="carousel-image" alt="Rear view of Naruto Shippuden Itachi and Sasuke-themed wrap on fishtank case" />
+                                                <img src={process.env.PUBLIC_URL + "/images/wraps/degodside.webp"} className="carousel-image" alt="Side view of Naruto Shippuden Itachi and Sasuke-themed wrap on fishtank case" />
+                                                <img src={process.env.PUBLIC_URL + "/images/wraps/degodfront2.webp"} className="carousel-image" alt="Clear Front view of Naruto Shippuden Itachi and Sasuke-themed wrap on fishtank case" />
                                                 <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-degod">&#10094;</button>
                                                 <button className="carousel-next" data-fn="nextImage" data-arg="carousel-degod">&#10095;</button>
                                             </div>                  
@@ -422,10 +422,10 @@ export default function Wraps() {
                                         </div>
                                             <div className="col-4">
                                                 <div className="carousel showcase-carousel" id="carousel-echo">
-                                                    <img src="/images/pcs/58.webp" className="carousel-image" alt="Vinyl wrapped Gigabyte AERO 15S OLED SA" />
-                                                    <img src="/images/wraps/echo2.webp" className="carousel-image" alt="Custom vinyl wrapped laptop" />
-                                                    <img src="/images/wraps/echo3.webp" className="carousel-image" alt="Mobile workstation for EchoThorns" />
-                                                    <img src="/images/wraps/echo4.webp" className="carousel-image" alt="Gigabyte AERO 15S OLED SA" />
+                                                    <img src={process.env.PUBLIC_URL + "/images/pcs/58.webp"} className="carousel-image" alt="Vinyl wrapped Gigabyte AERO 15S OLED SA" />
+                                                    <img src={process.env.PUBLIC_URL + "/images/wraps/echo2.webp"} className="carousel-image" alt="Custom vinyl wrapped laptop" />
+                                                    <img src={process.env.PUBLIC_URL + "/images/wraps/echo3.webp"} className="carousel-image" alt="Mobile workstation for EchoThorns" />
+                                                    <img src={process.env.PUBLIC_URL + "/images/wraps/echo4.webp"} className="carousel-image" alt="Gigabyte AERO 15S OLED SA" />
                                                     <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-echo">&#10094;</button>
                                                     <button className="carousel-next" data-fn="nextImage" data-arg="carousel-echo">&#10095;</button>
                                                 </div>                  

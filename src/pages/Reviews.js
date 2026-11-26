@@ -23,38 +23,38 @@ export default function Reviews() {
             <div className="contact-methods">
                 <div>
                     <a href="https://nextdoor.com/pages/neet-computers-boulder-co/">
-                    <img src="/images/ui-icons/Nextdoor-Logo.webp" alt="Nextdoor Logo" />
+                    <img src={process.env.PUBLIC_URL + "/images/ui-icons/Nextdoor-Logo.webp"} alt="Nextdoor Logo" />
                     <h3>Nextdoor</h3>
                     </a>
                 </div>
                 <div>
                     <a href="https://offerup.com/p/48780284">
-                    <img src="/images/ui-icons/offeruplogo.webp" alt="Offerup Logo" />
+                    <img src={process.env.PUBLIC_URL + "/images/ui-icons/offeruplogo.webp"} alt="Offerup Logo" />
                     <h3>Offerup</h3>
                     </a>
                 </div>
                 <div>
                     <a href="https://www.yelp.com/biz/neet-computers-boulder">
-                    <img src="/images/ui-icons/Yelp_Logo.webp" alt="Yelp Logo" />
+                    <img src={process.env.PUBLIC_URL + "/images/ui-icons/Yelp_Logo.webp"} alt="Yelp Logo" />
                     <h3>Yelp</h3>
                     </a>
                 </div>
                 <div>
                     <a href="https://www.facebook.com/marketplace/profile/100024614416481/">
-                    <img src="/images/ui-icons/fbmarketplace.webp" alt="Facebook Marketplace Logo" />
+                    <img src={process.env.PUBLIC_URL + "/images/ui-icons/fbmarketplace.webp"} alt="Facebook Marketplace Logo" />
                     <h3>Marketplace</h3>
                     </a>
                 </div>
                 <div>
                     <a href="https://business.colgbtqcc.org/list/member/neet-computers-llc-2386">
-                    <img src="/images/ui-icons/CLBGTQCOC.webp" alt="Colorado LGBTQ Chamber of Commerce" />
+                    <img src={process.env.PUBLIC_URL + "/images/ui-icons/CLBGTQCOC.webp"} alt="Colorado LGBTQ Chamber of Commerce" />
                     <h3>LGBTQ CoC</h3>
                     </a>
                     </div>
                 </div>
         </div>
         <div className="reviews">
-            <img src="/images/ui-icons/nextdoor.webp" alt="Nextdoor Neighborhood Fave" />
+            <img src={process.env.PUBLIC_URL + "/images/ui-icons/nextdoor.webp"} alt="Nextdoor Neighborhood Fave" />
         </div>
         <br />
     </main>

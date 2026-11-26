@@ -7,11 +7,11 @@ export default function About() {
     <main>
         <h2>Certifications</h2>
         <div className="certifications">
-            <img src="/images/certifications/A+.webp" alt="A+ Certified" />
-            <img src="/images/certifications/Network+.webp" alt="Network+ Certified" />
-            <img src="/images/certifications/Security+.webp" alt="Security+ Certified" />
-            <img src="/images/certifications/CIOS.webp" alt="CIOS Specialist" />
-            <img src="/images/certifications/CSIS.webp" alt="CSIS Specialist" />
+            <img src={process.env.PUBLIC_URL + "/images/certifications/A+.webp"} alt="A+ Certified" />
+            <img src={process.env.PUBLIC_URL + "/images/certifications/Network+.webp"} alt="Network+ Certified" />
+            <img src={process.env.PUBLIC_URL + "/images/certifications/Security+.webp"} alt="Security+ Certified" />
+            <img src={process.env.PUBLIC_URL + "/images/certifications/CIOS.webp"} alt="CIOS Specialist" />
+            <img src={process.env.PUBLIC_URL + "/images/certifications/CSIS.webp"} alt="CSIS Specialist" />
         </div>
     <section id="jade" className="about">
     <div className="about-container">
@@ -41,7 +41,7 @@ export default function About() {
                 </div>
             </div>
             <div className="col-1">
-                <img className="align-right" src="/images/company/jadewitharia2.webp" alt="Jade (left) and Aria (right) at Twenty Ninth Street" />
+                <img className="align-right" src={process.env.PUBLIC_URL + "/images/company/jadewitharia2.webp"} alt="Jade (left) and Aria (right) at Twenty Ninth Street" />
             </div>
         </div>
 
@@ -58,7 +58,7 @@ export default function About() {
                 </div>
             </div>
             <div className="col-2">
-                <img className="align-right" src="/images/company/jadewitharia.webp" alt="Jade (left) and Aria (right) at Pearl Street" />
+                <img className="align-right" src={process.env.PUBLIC_URL + "/images/company/jadewitharia.webp"} alt="Jade (left) and Aria (right) at Pearl Street" />
             </div>
         </div>
         <div className="row centered-image">
@@ -74,7 +74,7 @@ export default function About() {
                 </div>
             </div>
             <div className="image-container">
-                <img src="/images/company/engaged.webp" alt="Jade and Aria getting engaged at Micro Center" />
+                <img src={process.env.PUBLIC_URL + "/images/company/engaged.webp"} alt="Jade and Aria getting engaged at Micro Center" />
                 </div>
             </div>
             <br />
@@ -86,7 +86,7 @@ export default function About() {
                         <br />
                         <div className="mn-widget-member-assoc">
                             <a href="https://business.colgbtqcc.org/list/member/neet-computers-llc-2386" target="_blank" className="mn-widget-member-link">
-                                <img src="/images/partners/CLBGTQCOC_PrimaryLogo-5.webp" alt="Colorado LGBTQ Chamber of Commerce" title="Colorado LGBTQ Chamber of Commerce" className="mn-widget-member-logo" />
+                                <img src={process.env.PUBLIC_URL + "/images/partners/CLBGTQCOC_PrimaryLogo-5.webp"} alt="Colorado LGBTQ Chamber of Commerce" title="Colorado LGBTQ Chamber of Commerce" className="mn-widget-member-logo" />
                             </a>
                         </div>
                     </div>
@@ -94,7 +94,7 @@ export default function About() {
             </div>
             <div id="certificate-bar">
                 <br />
-                <img src="/images/certifications/NGLCC_business_enterprise_wt.webp" alt="Certified NGLCC LGBTBE Business Enterprise" />
+                <img src={process.env.PUBLIC_URL + "/images/certifications/NGLCC_business_enterprise_wt.webp"} alt="Certified NGLCC LGBTBE Business Enterprise" />
                 <br />
             </div>
         </div>           

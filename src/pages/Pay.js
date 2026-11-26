@@ -13,7 +13,7 @@ export default function Pay() {
                 <div className="card-container">
                     <div className="card">
                         <div className="imgCard">
-                            <img src="/images/payments/paypal.webp" alt="PayPal QR Code" />
+                            <img src={process.env.PUBLIC_URL + "/images/payments/paypal.webp"} alt="PayPal QR Code" />
                         </div>
                         <div className="contentCard">
                             <h2>Paypal</h2>
@@ -22,7 +22,7 @@ export default function Pay() {
                     </div>
                     <div className="card">
                         <div className="imgCard">
-                            <img src="/images/payments/cashapp.webp" alt="CashApp QR Code" />
+                            <img src={process.env.PUBLIC_URL + "/images/payments/cashapp.webp"} alt="CashApp QR Code" />
                         </div>
                         <div className="contentCard">
                             <h2>Cashapp</h2>
@@ -31,7 +31,7 @@ export default function Pay() {
                     </div>
                     <div className="card">
                         <div className="imgCard">
-                            <img src="/images/payments/zelle.webp" alt="Zelle logo" />
+                            <img src={process.env.PUBLIC_URL + "/images/payments/zelle.webp"} alt="Zelle logo" />
                         </div>
                         <div className="contentCard">
                             <h2>Zelle</h2>
@@ -40,7 +40,7 @@ export default function Pay() {
                     </div>
                     <div className="card">
                         <div className="imgCard">
-                            <img src="/images/payments/venmo.webp" alt="Venmo QR code" />
+                            <img src={process.env.PUBLIC_URL + "/images/payments/venmo.webp"} alt="Venmo QR code" />
                         </div>
                         <div className="contentCard">
                             <h2>Venmo</h2>
@@ -56,7 +56,7 @@ export default function Pay() {
                 <div className="card-container">
                     <div className="card">
                         <div className="imgCard">
-                            <img src="/images/payments/paypal_business.webp" alt="PayPal Business QR Code" />
+                            <img src={process.env.PUBLIC_URL + "/images/payments/paypal_business.webp"} alt="PayPal Business QR Code" />
                         </div>
                         <div className="contentCard">
                             <h2>Paypal Business</h2>
@@ -65,7 +65,7 @@ export default function Pay() {
                     </div>
                                         <div className="card">
                         <div className="imgCard">
-                            <img src="/images/payments/venmo.webp" alt="Venmo QR Code" />
+                            <img src={process.env.PUBLIC_URL + "/images/payments/venmo.webp"} alt="Venmo QR Code" />
                         </div>
                         <div className="contentCard">
                             <h2>Venmo with Fee</h2>
@@ -74,7 +74,7 @@ export default function Pay() {
                     </div>
                     <div className="card">
                         <div className="imgCard">
-                            <img src="/images/payments/paylater.webp" alt="Paypal Pay Later" />
+                            <img src={process.env.PUBLIC_URL + "/images/payments/paylater.webp"} alt="Paypal Pay Later" />
                         </div>
                         <div className="contentCard">
                             <h2>PayPal Secure Checkout</h2>
@@ -83,7 +83,7 @@ export default function Pay() {
                     </div>
                         <div className="card">
                         <div className="imgCard">
-                            <img src="/images/payments/google-pay.webp" alt="Google Pay logo" />
+                            <img src={process.env.PUBLIC_URL + "/images/payments/google-pay.webp"} alt="Google Pay logo" />
                         </div>
                         <div className="contentCard">
                             <br />
@@ -94,7 +94,7 @@ export default function Pay() {
                     </div>
                     <div className="card">
                         <div className="imgCard">
-                            <img src="/images/payments/BuyNowPayLater.webp" alt="BuyNowPayLater logo" />
+                            <img src={process.env.PUBLIC_URL + "/images/payments/BuyNowPayLater.webp"} alt="BuyNowPayLater logo" />
                         </div>
                         <div className="contentCard">
                             <h2>Buy Now Pay Later</h2>

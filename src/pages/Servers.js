@@ -44,8 +44,8 @@ export default function Servers() {
                             </div>
                                 <div className="col-4">
                                     <div className="carousel showcase-carousel" id="carousel-VESL">
-                                        <img src="/images/servers/aifront.webp" className="carousel-image" alt="Front view of W790 AI Server for VESL" />
-                                        <img src="/images/servers/aiside.webp" className="carousel-image" alt="Side view of W790 AI Server for VESL" />
+                                        <img src={process.env.PUBLIC_URL + "/images/servers/aifront.webp"} className="carousel-image" alt="Front view of W790 AI Server for VESL" />
+                                        <img src={process.env.PUBLIC_URL + "/images/servers/aiside.webp"} className="carousel-image" alt="Side view of W790 AI Server for VESL" />
                                         <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-VESL">&#10094;</button>
                                         <button className="carousel-next" data-fn="nextImage" data-arg="carousel-VESL">&#10095;</button>
                                     </div>            
@@ -89,8 +89,8 @@ export default function Servers() {
                                 </div>
                                 <div className="col-4">
                                     <div className="carousel showcase-carousel" id="carousel-true">
-                                        <img src="/images/servers/truenasside.webp" className="carousel-image" alt="Side view of X299 TrueNAS Scale Server" />
-                                        <img src="/images/servers/truenasback.webp" className="carousel-image" alt="Back view of X299 TrueNAS Scale Server" />
+                                        <img src={process.env.PUBLIC_URL + "/images/servers/truenasside.webp"} className="carousel-image" alt="Side view of X299 TrueNAS Scale Server" />
+                                        <img src={process.env.PUBLIC_URL + "/images/servers/truenasback.webp"} className="carousel-image" alt="Back view of X299 TrueNAS Scale Server" />
                                         <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-true">&#10094;</button>
                                         <button className="carousel-next" data-fn="nextImage" data-arg="carousel-true">&#10095;</button>
                                     </div>            
@@ -137,8 +137,8 @@ export default function Servers() {
                         </div>
                         <div className="col-4">
                             <div className="carousel showcase-carousel" id="carousel-RTX">
-                                <img src="/images/servers/ai2front.webp" className="carousel-image" alt="Front view of Dual-RTX AI Server for VESL" />
-                                <img src="/images/servers/ai2side.webp" className="carousel-image" alt="Side view of Dual-RTX AI Server for VESL" />
+                                <img src={process.env.PUBLIC_URL + "/images/servers/ai2front.webp"} className="carousel-image" alt="Front view of Dual-RTX AI Server for VESL" />
+                                <img src={process.env.PUBLIC_URL + "/images/servers/ai2side.webp"} className="carousel-image" alt="Side view of Dual-RTX AI Server for VESL" />
                                 <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-RTX">&#10094;</button>
                                 <button className="carousel-next" data-fn="nextImage" data-arg="carousel-RTX">&#10095;</button>
                             </div>            
@@ -170,9 +170,9 @@ export default function Servers() {
                         </div>
                         <div className="col-4">
                             <div className="carousel showcase-carousel" id="carousel-OEC">
-                                <img src="/images/servers/silverside.webp" className="carousel-image" alt="Side view of NAS for OEC Engineering Corporation" />
-                                <img src="/images/servers/silverfront.webp" className="carousel-image" alt="Front view of NAS for OEC Engineering Corporation" />
-                                <img src="/images/servers/silverhdds.webp" className="carousel-image" alt="Hot-swappable 4TB hard drives in NAS for OEC Engineering Corporation" />
+                                <img src={process.env.PUBLIC_URL + "/images/servers/silverside.webp"} className="carousel-image" alt="Side view of NAS for OEC Engineering Corporation" />
+                                <img src={process.env.PUBLIC_URL + "/images/servers/silverfront.webp"} className="carousel-image" alt="Front view of NAS for OEC Engineering Corporation" />
+                                <img src={process.env.PUBLIC_URL + "/images/servers/silverhdds.webp"} className="carousel-image" alt="Hot-swappable 4TB hard drives in NAS for OEC Engineering Corporation" />
                                 <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-OEC">&#10094;</button>
                                 <button className="carousel-next" data-fn="nextImage" data-arg="carousel-OEC">&#10095;</button>
                             </div>            
@@ -205,8 +205,8 @@ export default function Servers() {
                         </div>
                         <div className="col-4">
                             <div className="carousel showcase-carousel" id="carousel-NAS">
-                                <img src="/images/servers/nasfront.webp" className="carousel-image" alt="Front view of Budget NAS for OEC Engineering Corporation" />
-                                <img src="/images/servers/nasside.webp" className="carousel-image" alt="Side view of Budget NAS for OEC Engineering Corporation" />
+                                <img src={process.env.PUBLIC_URL + "/images/servers/nasfront.webp"} className="carousel-image" alt="Front view of Budget NAS for OEC Engineering Corporation" />
+                                <img src={process.env.PUBLIC_URL + "/images/servers/nasside.webp"} className="carousel-image" alt="Side view of Budget NAS for OEC Engineering Corporation" />
                                 <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-NAS">&#10094;</button>
                                 <button className="carousel-next" data-fn="nextImage" data-arg="carousel-NAS">&#10095;</button>
                             </div>            
@@ -245,9 +245,9 @@ export default function Servers() {
                         </div>
                         <div className="col-4">
                             <div className="carousel showcase-carousel" id="carousel-Southpaw">
-                                <img src="/images/servers/southpawside.webp" className="carousel-image" alt="Side view of NVME SSD RAID Server for Southpaw" />
-                                <img src="/images/servers/southpawfront.webp" className="carousel-image" alt="Front view of NVME SSD RAID Server for Southpaw" />
-                                <img src="/images/servers/southpawback.webp" className="carousel-image" alt="Back view of NVME SSD RAID Server for Southpaw" />
+                                <img src={process.env.PUBLIC_URL + "/images/servers/southpawside.webp"} className="carousel-image" alt="Side view of NVME SSD RAID Server for Southpaw" />
+                                <img src={process.env.PUBLIC_URL + "/images/servers/southpawfront.webp"} className="carousel-image" alt="Front view of NVME SSD RAID Server for Southpaw" />
+                                <img src={process.env.PUBLIC_URL + "/images/servers/southpawback.webp"} className="carousel-image" alt="Back view of NVME SSD RAID Server for Southpaw" />
                                 <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-Southpaw">&#10094;</button>
                                 <button className="carousel-next" data-fn="nextImage" data-arg="carousel-Southpaw">&#10095;</button>
                             </div>            

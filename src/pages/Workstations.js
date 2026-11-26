@@ -41,8 +41,8 @@ export default function Workstations() {
                         </div>
                         <div className="col-4">
                             <div className="carousel showcase-carousel" id="carousel-4090">
-                                <img src="/images/workstations/4090side.webp" className="carousel-image" alt="Side view of UE 5, VR, and 3D Rendering workstation" />
-                                <img src="/images/workstations/4090front.webp" className="carousel-image" alt="Front view of UE 5, VR, and 3D Rendering workstation" />
+                                <img src={process.env.PUBLIC_URL + "/images/workstations/4090side.webp"} className="carousel-image" alt="Side view of UE 5, VR, and 3D Rendering workstation" />
+                                <img src={process.env.PUBLIC_URL + "/images/workstations/4090front.webp"} className="carousel-image" alt="Front view of UE 5, VR, and 3D Rendering workstation" />
                                 <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-4090">&#10094;</button>
                                 <button className="carousel-next" data-fn="nextImage" data-arg="carousel-4090">&#10095;</button>
                             </div>            
@@ -78,8 +78,8 @@ export default function Workstations() {
                         </div>
                         <div className="col-4">
                             <div className="carousel showcase-carousel" id="carousel-x399">
-                                <img src="/images/workstations/x399side.webp" className="carousel-image" alt="Side view of X399 Threadripper Dual-Boot workstation" />
-                                <img src="/images/workstations/x399front.webp" className="carousel-image" alt="Front view of X399 Threadripper Dual-Boot workstation" />
+                                <img src={process.env.PUBLIC_URL + "/images/workstations/x399side.webp"} className="carousel-image" alt="Side view of X399 Threadripper Dual-Boot workstation" />
+                                <img src={process.env.PUBLIC_URL + "/images/workstations/x399front.webp"} className="carousel-image" alt="Front view of X399 Threadripper Dual-Boot workstation" />
                                 <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-x399">&#10094;</button>
                                 <button className="carousel-next" data-fn="nextImage" data-arg="carousel-x399">&#10095;</button>
                             </div>            
@@ -110,8 +110,8 @@ export default function Workstations() {
                         </div>
                         <div className="col-4">
                             <div className="carousel showcase-carousel" id="carousel-x58">
-                                <img src="/images/workstations/x58side.webp" className="carousel-image" alt="Side view of X58 i7-980X Refurbished Adobe Suite Workstation" />
-                                <img src="/images/workstations/x58front.webp" className="carousel-image" alt="Front view of X58 i7-980X Refurbished Adobe Suite Workstation" />
+                                <img src={process.env.PUBLIC_URL + "/images/workstations/x58side.webp"} className="carousel-image" alt="Side view of X58 i7-980X Refurbished Adobe Suite Workstation" />
+                                <img src={process.env.PUBLIC_URL + "/images/workstations/x58front.webp"} className="carousel-image" alt="Front view of X58 i7-980X Refurbished Adobe Suite Workstation" />
                                 <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-x58">&#10094;</button>
                                 <button className="carousel-next" data-fn="nextImage" data-arg="carousel-x58">&#10095;</button>
                             </div>            
@@ -146,8 +146,8 @@ export default function Workstations() {
                         </div>
                         <div className="col-4">
                             <div className="carousel showcase-carousel" id="carousel-ableton">
-                                <img src="/images/workstations/abletonfront.webp" className="carousel-image" alt="Front view of Affordable Ableton Music Production and PLS CADD Workstation" />
-                                <img src="/images/workstations/abletonside.webp" className="carousel-image" alt="Side view of Affordable Ableton Music Production and PLS CADD Workstation" />
+                                <img src={process.env.PUBLIC_URL + "/images/workstations/abletonfront.webp"} className="carousel-image" alt="Front view of Affordable Ableton Music Production and PLS CADD Workstation" />
+                                <img src={process.env.PUBLIC_URL + "/images/workstations/abletonside.webp"} className="carousel-image" alt="Side view of Affordable Ableton Music Production and PLS CADD Workstation" />
                                 <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-ableton">&#10094;</button>
                                 <button className="carousel-next" data-fn="nextImage" data-arg="carousel-ableton">&#10095;</button>
                             </div>            
@@ -183,8 +183,8 @@ export default function Workstations() {
                         </div>
                         <div className="col-4">
                             <div className="carousel showcase-carousel" id="carousel-able">
-                                <img src="/images/workstations/ablefront.webp" className="carousel-image" alt="Front view of audiovisual production workstation" />
-                                <img src="/images/workstations/ableside.webp" className="carousel-image" alt="Side view of audiovisual production workstation" />
+                                <img src={process.env.PUBLIC_URL + "/images/workstations/ablefront.webp"} className="carousel-image" alt="Front view of audiovisual production workstation" />
+                                <img src={process.env.PUBLIC_URL + "/images/workstations/ableside.webp"} className="carousel-image" alt="Side view of audiovisual production workstation" />
                                 <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-able">&#10094;</button>
                                 <button className="carousel-next" data-fn="nextImage" data-arg="carousel-able">&#10095;</button>
                             </div>            
@@ -217,8 +217,8 @@ export default function Workstations() {
                         </div>
                         <div className="col-4">
                             <div className="carousel showcase-carousel" id="carousel-UltraBudget">
-                                <img src="/images/workstations/fxfront.webp" className="carousel-image" alt="Front view of ultra-budget CAD workstation" />
-                                <img src="/images/workstations/fxside.webp" className="carousel-image" alt="Side view of ultra-budget CAD workstation" />
+                                <img src={process.env.PUBLIC_URL + "/images/workstations/fxfront.webp"} className="carousel-image" alt="Front view of ultra-budget CAD workstation" />
+                                <img src={process.env.PUBLIC_URL + "/images/workstations/fxside.webp"} className="carousel-image" alt="Side view of ultra-budget CAD workstation" />
                                 <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-UltraBudget">&#10094;</button>
                                 <button className="carousel-next" data-fn="nextImage" data-arg="carousel-UltraBudget">&#10095;</button>
                             </div>            
@@ -258,8 +258,8 @@ export default function Workstations() {
                     </div>
                     <div className="col-4">
                         <div className="carousel showcase-carousel" id="carousel-newbase">
-                            <img src="/images/workstations/baseside.webp" className="carousel-image" alt="Side view of CAM workstation for Baseline Design" />
-                            <img src="/images/workstations/basefront.webp" className="carousel-image" alt="Front view of CAM workstation for Baseline Design" />
+                            <img src={process.env.PUBLIC_URL + "/images/workstations/baseside.webp"} className="carousel-image" alt="Side view of CAM workstation for Baseline Design" />
+                            <img src={process.env.PUBLIC_URL + "/images/workstations/basefront.webp"} className="carousel-image" alt="Front view of CAM workstation for Baseline Design" />
                             <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-newbase">&#10094;</button>
                             <button className="carousel-next" data-fn="nextImage" data-arg="carousel-newbase">&#10095;</button>
                         </div>            
@@ -295,8 +295,8 @@ export default function Workstations() {
                 </div>
                 <div className="col-4">
                     <div className="carousel showcase-carousel" id="carousel-arc">
-                        <img src="/images/workstations/arcback.webp" className="carousel-image" alt="Back view of Intel Arc Alchemist Resolve rig" />
-                        <img src="/images/workstations/arcfront.webp" className="carousel-image" alt="Front view of Intel Arc Alchemist Resolve rig" />
+                        <img src={process.env.PUBLIC_URL + "/images/workstations/arcback.webp"} className="carousel-image" alt="Back view of Intel Arc Alchemist Resolve rig" />
+                        <img src={process.env.PUBLIC_URL + "/images/workstations/arcfront.webp"} className="carousel-image" alt="Front view of Intel Arc Alchemist Resolve rig" />
                         <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-arc">&#10094;</button>
                         <button className="carousel-next" data-fn="nextImage" data-arg="carousel-arc">&#10095;</button>
                     </div>            
@@ -326,8 +326,8 @@ export default function Workstations() {
                 </div>
                 <div className="col-4">
                     <div className="carousel showcase-carousel" id="carousel-12">
-                        <img src="/images/workstations/12front.webp" className="carousel-image" alt="Front view of overclocked 12th gen CAD workstation" />
-                        <img src="/images/workstations/12side.webp" className="carousel-image" alt="Side view of overclocked 12th gen CAD workstation" />
+                        <img src={process.env.PUBLIC_URL + "/images/workstations/12front.webp"} className="carousel-image" alt="Front view of overclocked 12th gen CAD workstation" />
+                        <img src={process.env.PUBLIC_URL + "/images/workstations/12side.webp"} className="carousel-image" alt="Side view of overclocked 12th gen CAD workstation" />
                         <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-12">&#10094;</button>
                         <button className="carousel-next" data-fn="nextImage" data-arg="carousel-12">&#10095;</button>
                     </div>            
@@ -345,9 +345,9 @@ export default function Workstations() {
                         </div>
                         <div className="col-4">
                             <div className="carousel showcase-carousel" id="carousel-alien">
-                                <img src="/images/workstations/alienfront.webp" className="carousel-image" alt="Front view of Alienware Area-51 R3 Threadripper edition workstation" />
-                                <img src="/images/workstations/alienside.webp" className="carousel-image" alt="Side view of Alienware Area-51 R3 Threadripper edition workstation" />
-                                <img src="/images/workstations/alienback.webp" className="carousel-image" alt="Back view of Alienware Area-51 R3 Threadripper edition workstation" />
+                                <img src={process.env.PUBLIC_URL + "/images/workstations/alienfront.webp"} className="carousel-image" alt="Front view of Alienware Area-51 R3 Threadripper edition workstation" />
+                                <img src={process.env.PUBLIC_URL + "/images/workstations/alienside.webp"} className="carousel-image" alt="Side view of Alienware Area-51 R3 Threadripper edition workstation" />
+                                <img src={process.env.PUBLIC_URL + "/images/workstations/alienback.webp"} className="carousel-image" alt="Back view of Alienware Area-51 R3 Threadripper edition workstation" />
                                 <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-alien">&#10094;</button>
                                 <button className="carousel-next" data-fn="nextImage" data-arg="carousel-alien">&#10095;</button>
                             </div>            
@@ -366,8 +366,8 @@ export default function Workstations() {
                         </div>
                         <div className="col-4">
                             <div className="carousel showcase-carousel" id="carousel-frvs">
-                                <img src="/images/workstations/frvsfront.webp" className="carousel-image" alt="Front view of budget Adobe editing workstation for FRVS" />
-                                <img src="/images/workstations/frvsside.webp" className="carousel-image" alt="Side view of budget Adobe editing workstation for FRVS" />
+                                <img src={process.env.PUBLIC_URL + "/images/workstations/frvsfront.webp"} className="carousel-image" alt="Front view of budget Adobe editing workstation for FRVS" />
+                                <img src={process.env.PUBLIC_URL + "/images/workstations/frvsside.webp"} className="carousel-image" alt="Side view of budget Adobe editing workstation for FRVS" />
                                 <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-frvs">&#10094;</button>
                                 <button className="carousel-next" data-fn="nextImage" data-arg="carousel-frvs">&#10095;</button>
                             </div>            
@@ -386,8 +386,8 @@ export default function Workstations() {
                         </div>
                         <div className="col-4">
                             <div className="carousel showcase-carousel" id="carousel-baseline">
-                                <img src="/images/workstations/baselinefront.webp" className="carousel-image" alt="Front view of budget CAD workstation for Baseline Design" />
-                                <img src="/images/workstations/baselineside.webp" className="carousel-image" alt="Side view of budget CAD workstation for Baseline Design" />
+                                <img src={process.env.PUBLIC_URL + "/images/workstations/baselinefront.webp"} className="carousel-image" alt="Front view of budget CAD workstation for Baseline Design" />
+                                <img src={process.env.PUBLIC_URL + "/images/workstations/baselineside.webp"} className="carousel-image" alt="Side view of budget CAD workstation for Baseline Design" />
                                 <button className="carousel-prev" data-fn="prevImage" data-arg="carousel-baseline">&#10094;</button>
                                 <button className="carousel-next" data-fn="nextImage" data-arg="carousel-baseline">&#10095;</button>
                             </div>            
