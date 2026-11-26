@@ -1,8 +1,13 @@
 // Ported from reviews.html (static site source).
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-// Lazy widget component with reserved space
+// Review widget with reserved space. The Elfsight div renders right
+// away inside its reserved box, and Elfsight's own lazy attribute
+// defers the actual widget initialization until it approaches the
+// viewport, which is the platform's supported lazy behavior. The
+// platform script is ensured on mount, while the div is already in
+// the DOM, the same order the original static page used.
 function ensureElfsightScript() {
   if (
     document.querySelector(
@@ -18,9 +23,6 @@ function ensureElfsightScript() {
 }
 
 function LazyReviewWidget({ appId, widgetType }) {
-  const [isVisible, setIsVisible] = useState(false);
-  const widgetRef = useRef(null);
-
   // Reserve space based on widget type (mobile vs desktop dimensions)
   const getReservedHeight = () => {
     // Facebook reviews widget: ~400px desktop, ~500px mobile
@@ -33,65 +35,26 @@ function LazyReviewWidget({ appId, widgetType }) {
     return '350px'; // default
   };
 
-  // Intersection Observer to detect when widget approaches viewport.
-  // When it fires, mount the Elfsight div AND make sure the platform
-  // script is on its way: the page level loader only injects it when a
-  // widget div already exists, which is never true for a lazy widget.
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            ensureElfsightScript();
-            setIsVisible(true);
-          }
-        });
-      },
-      {
-        rootMargin: '200px', // Start loading 200px before widget enters viewport
-        threshold: 0.1
-      }
-    );
-
-    if (widgetRef.current) {
-      observer.observe(widgetRef.current);
-    }
-
-    return () => {
-      observer.disconnect();
-    };
+    ensureElfsightScript();
   }, []);
 
   return (
     <div
-      ref={widgetRef}
       className="lazy-widget-container"
       style={{
         position: 'relative',
-        minHeight: getReservedHeight(),
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
+        minHeight: getReservedHeight()
       }}
     >
-      {!isVisible && (
-        <div className="widget-placeholder" style={{
-          color: '#999',
-          fontSize: '14px'
-        }}>
-          Loading reviews...
-        </div>
-      )}
-      {isVisible && (
-        <div
-          className={`elfsight-app-${appId}`}
-          data-elfsight-app-lazy
-          style={{
-            width: '100%',
-            minHeight: getReservedHeight()
-          }}
-        />
-      )}
+      <div
+        className={`elfsight-app-${appId}`}
+        data-elfsight-app-lazy
+        style={{
+          width: '100%',
+          minHeight: getReservedHeight()
+        }}
+      />
     </div>
   );
 }
