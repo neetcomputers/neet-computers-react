@@ -2,12 +2,11 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-// Review widget with reserved space. The Elfsight div renders right
-// away inside its reserved box, and Elfsight's own lazy attribute
-// defers the actual widget initialization until it approaches the
-// viewport, which is the platform's supported lazy behavior. The
-// platform script is ensured on mount, while the div is already in
-// the DOM, the same order the original static page used.
+// Review widget with reserved space. Elfsight's supported integration:
+// - Platform script loads async on mount
+// - First visible widget initializes immediately (no lazy attribute)
+// - Below-fold widgets use data-elfsight-app-lazy for IntersectionObserver-based lazy init
+// - Google widget bundle deferred until it approaches viewport
 function ensureElfsightScript() {
   if (
     document.querySelector(
@@ -19,7 +18,8 @@ function ensureElfsightScript() {
   const s = document.createElement('script');
   s.src = 'https://static.elfsight.com/platform/platform.js';
   s.async = true;
-  document.body.appendChild(s);
+  // Append to head for earlier execution, before React fully renders
+  document.head.appendChild(s);
 }
 
 function LazyReviewWidget({ appId, widgetType, isFirst = false }) {
@@ -33,7 +33,7 @@ function LazyReviewWidget({ appId, widgetType, isFirst = false }) {
     >
       <div
         className={`elfsight-app-${appId}`}
-        {...(!isFirst && { 'data-elfsight-app-lazy': true })}
+        {...(isFirst ? {} : { 'data-elfsight-app-lazy': true })}
         style={{
           width: '100%'
         }}
@@ -69,11 +69,13 @@ export default function Reviews() {
       <article>
         <h2>Facebook Reviews</h2>
         <div className="card-container">
+          {/* First visible widget - initializes immediately without lazy */}
           <LazyReviewWidget appId="efd88dc5-2313-4ed6-9a25-398a440a5b38" widgetType="facebook" isFirst={true} />
         </div>
         <br />
         <h2>Google Reviews</h2>
         <div className="card-container">
+          {/* Lazy widget - bundle deferred until viewport */}
           <LazyReviewWidget appId="f2d7397a-fb66-488b-8f36-29437ad034be" widgetType="google" />
         </div>
       </article>
